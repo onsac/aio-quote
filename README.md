@@ -67,3 +67,53 @@ URL PROD: https://api.me.com.br/MEBrokerWebService/MEBrokerWebService.asmx?op=pr
 
 Integração 11 Carga de Objeto de Custo (Criação/Alteração/Bloqueio) do ERP ao ME (Outbound) 
 URL PROD: https://api.me.com.br/MEBrokerWebService/MEBrokerWebService.asmx?op=processarMensagemCentro_Custo
+
+## AIO-QUOTE – Contrato de APIs Origem e Destino
+
+SIENGE Webhook 1 Envia autorização de pedido de compra - PURCHASE_ORDER_AUTHORIZATION_CHANGED : Sempre que a autorização do pedido de compra mudar
+
+AIO API POST : /api/cotação/purchaseOrder
+Payload  : { "purchaseOrderId" : int, "authorized": boolean } 
+
+
+Integração 1 Busca solicitação de Compras 
+API GET: https://api.sienge.com.br/produtoeinovacao/public/api/v1/purchase-requests/{purchaseRequestId}
+
+```sh
+{
+  "id": 2104,
+  "buildingId": 300,
+  "departamentId": 5,
+  "requesterUser": "USER",
+  "requestDate": "2018-01-03",
+  "notes": "Annotation",
+  "status": "PENDING",
+  "consitent": "CONSISTENT",
+  "createdBy": "USER",
+  "createdAt": "2018-03-11T14:20:00.000-03:00",
+  "modifiedBy": "ANOTHERUSER",
+  "modifiedAt": "2018-04-02T18:20:00.000-03:00"
+}
+```
+Integração 2.1 Busca Item de Solicitação de Compra
+URL PROD: https://api.sienge.com.br/produtoeinovacao/public/api/v1/purchase-requests/all/items?purchaseRequestId={id}&buildingId={buildingId}
+
+```sh
+{
+  "resultSetMetadata": { "count": 0, "offset": 0, "limit": 0  },
+  "results": [
+    {
+      "productId": 1001,
+      "detailId": 2,
+      "trademarkId": 3,
+      "quantity": 15,
+      "unitySymbol": "un",
+      "authorized": true,
+      "disapproved": false,
+      "competenceLevel": 0,
+      "notes": "Descrição do item"
+    }
+  ],
+  "links": [   {  "rel": "delivery-requirements",   "href": "http://../v1/purchase-requests/622/items/1/delivery-requirements"   }  ]
+}
+```
