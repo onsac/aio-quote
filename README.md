@@ -68,6 +68,20 @@ URL PROD: https://api.me.com.br/MEBrokerWebService/MEBrokerWebService.asmx?op=pr
 Integração 11 Carga de Objeto de Custo (Criação/Alteração/Bloqueio) do ERP ao ME (Outbound) 
 URL PROD: https://api.me.com.br/MEBrokerWebService/MEBrokerWebService.asmx?op=processarMensagemCentro_Custo
 
+## APIs – SIENGE
+
+Integração 2 Busca solicitação de Compras (Outbound) 
+URL PROD: https://api.sienge.com.br/produtoeinovacao/public/api/v1/purchase-requests/{purchaseRequestId}
+
+Integração 2.1 Busca Item de Solicitação de Compra (Outbound)
+URL PROD: https://api.sienge.com.br/produtoeinovacao/public/api/v1/purchase-requests/all/items
+
+Integração 3 Cria cotação de Preço (Inbound)
+URL PROD: https://api.sienge.com.br/produtoeinovacao/public/api/v1/purchase-quotations
+
+Integração 4 Cria Negociação de Cotação de Preço com o Fornecedor (Inbound)
+URL PROD: https://api.sienge.com.br/produtoeinovacao/public/api/v1/purchase-quotations/{puchaseQuotationId}/suppliers/{supplierId}/negotiations
+
 ## AIO-QUOTE – Contrato de APIs Origem e Destino
 
 SIENGE Webhook 1 Envia autorização de pedido de compra - PURCHASE_ORDER_AUTHORIZATION_CHANGED : Sempre que a autorização do pedido de compra mudar
@@ -117,3 +131,119 @@ URL PROD: https://api.sienge.com.br/produtoeinovacao/public/api/v1/purchase-requ
   "links": [   {  "rel": "delivery-requirements",   "href": "http://../v1/purchase-requests/622/items/1/delivery-requirements"   }  ]
 }
 ```
+## Integração 1 Envio da Requisição (Criação /Alteração /Cancelamento) do ERP ao ME (Outbound) 
+
+URL PROD: https://api.me.com.br/MEBrokerWebService/MEBrokerWebService.asmx?op=processarMensagemRequisicao 
+```sh
+ <soap12:Body>
+    <processarMensagemRequisicao xmlns="http://www.me.com.br/WebServices">
+      <msgRequisicao>
+        <IDINTEGRACAO>int</IDINTEGRACAO>
+        <WORKFLOW>int</WORKFLOW>
+        <IDREQUISITANTE>int</IDREQUISITANTE>
+        <NOMEREQUISITANTE>string</NOMEREQUISITANTE>
+        <CONTATOREQUISITANTE>string</CONTATOREQUISITANTE>
+        <EMAILREQUISITANTE>string</EMAILREQUISITANTE>
+        <TELEFONEREQUISITANTE>string</TELEFONEREQUISITANTE>
+        <TAGREQUISITANTE>string</TAGREQUISITANTE>
+        <STATUS>int</STATUS>
+        <REQUISICAO>int</REQUISICAO>
+        <REQUISICAOCLIENTE>string</REQUISICAOCLIENTE>
+        <REQUISICAOORIGEM>string</REQUISICAOORIGEM>
+        <LOCALENTREGACLIENTE>string</LOCALENTREGACLIENTE>
+        <LocalEntrega>
+          <IDINTEGRACAO>int</IDINTEGRACAO>
+          <NOMELOCAL>string</NOMELOCAL>
+          <CODIGO>string</CODIGO>
+          <ENDERECO>string</ENDERECO>
+          <NUMERO>string</NUMERO>
+          <BAIRRO>string</BAIRRO>
+          <COMPLEMENTO>string</COMPLEMENTO>
+          <CIDADE>string</CIDADE>
+          <ESTADO>string</ESTADO>
+          <CEP>string</CEP>
+          <CONTATO>string</CONTATO>
+          <DDI>string</DDI>
+          <TELEFONE>string</TELEFONE>
+          <FAX>string</FAX>
+          <PAIS>string</PAIS>
+          <TIPO>int</TIPO>
+          <CGC>string</CGC>
+          <IE>string</IE>
+          <SUFRAMA>string</SUFRAMA>
+          <BLOQUEIAENVIOPEDIDO>string</BLOQUEIAENVIOPEDIDO>
+          <EXCLUIDO>string</EXCLUIDO>
+          <LOGINNAME>string</LOGINNAME>
+          <NOMERECEBEDOR>string</NOMERECEBEDOR>
+          <PERMITEPEDITEMNOUPLOADXMLDENFE>string</PERMITEPEDITEMNOUPLOADXMLDENFE>
+          <LocaisBorgs>
+            <LocaisBorg xsi:nil="true" />
+            <LocaisBorg xsi:nil="true" />
+          </LocaisBorgs>
+        </LocalEntrega>
+        <LOCALFATURAMENTOCLIENTE>string</LOCALFATURAMENTOCLIENTE>
+        <LOCALCOBRANCACLIENTE>string</LOCALCOBRANCACLIENTE>
+        <CENTROCUSTOSCLIENTE>string</CENTROCUSTOSCLIENTE>
+        <TIPOCENTROCUSTO>string</TIPOCENTROCUSTO>
+        <DATACOLOCACAO>dateTime</DATACOLOCACAO>
+        <DATAENTREGA>dateTime</DATAENTREGA>
+        <LOGIN>string</LOGIN>
+        <OBSERVACAO>string</OBSERVACAO>
+        <OBSRECUSA>string</OBSRECUSA>
+        <OBSCLI>string</OBSCLI>
+        <OBSSTATUSERP>string</OBSSTATUSERP>
+        <REATIVO>string</REATIVO>
+        <ALTERACAO>string</ALTERACAO>
+        <DATAHORAALTERACAO>dateTime</DATAHORAALTERACAO>
+        <CONTACONTABILCLIENTE>string</CONTACONTABILCLIENTE>
+        <CATEGORIA>string</CATEGORIA>
+        <CODIGOCATEGORIA>string</CODIGOCATEGORIA>
+        <GRUPO_COMPRAS>string</GRUPO_COMPRAS>
+        <CANCELADO>string</CANCELADO>
+        <REQCONCLUIDO>string</REQCONCLUIDO>
+        <REQLIBERADO>string</REQLIBERADO>
+        <REQREJEITADO>string</REQREJEITADO>
+        <DIAGRAMADEREDE>string</DIAGRAMADEREDE>
+        <DATAHORA>dateTime</DATAHORA>
+        <OI_INV>string</OI_INV>
+        <TAG_STATUS>string</TAG_STATUS>
+        <JUSTIFICATIVA>string</JUSTIFICATIVA>
+        <DATAHORA_STATUS>dateTime</DATAHORA_STATUS>
+        <DATACRIACAOERP>dateTime</DATACRIACAOERP>
+        <DATALIBERACAOERP>dateTime</DATALIBERACAOERP>
+        <EMAIL_GESTOR>string</EMAIL_GESTOR>
+        <CONTRATOCLIENTE>string</CONTRATOCLIENTE>
+        <GERARSO>string</GERARSO>
+        <LocalEntregaBOrg>
+          <Codigo>string</Codigo>
+          <BOrgField>string</BOrgField>
+          <BOrgCode>string</BOrgCode>
+        </LocalEntregaBOrg>
+        <CentroCustoBOrg>
+          <Codigo>string</Codigo>
+          <BOrgField>string</BOrgField>
+          <BOrgCode>string</BOrgCode>
+        </CentroCustoBOrg>
+        <Objetos>
+          <Propriedade>
+            <Nome>string</Nome>
+            <Valor>string</Valor>
+          </Propriedade>
+          <Propriedade>
+            <Nome>string</Nome>
+            <Valor>string</Valor>
+          </Propriedade>
+        </Objetos>
+        <Atributos>
+          <Atributo>
+            <NomeAtributo>string</NomeAtributo>
+            <DescricaoAtributo>string</DescricaoAtributo>
+            <ValorAtributo>string</ValorAtributo>
+          </Atributo>
+          <Atributo>
+            <NomeAtributo>string</NomeAtributo>
+            <DescricaoAtributo>string</DescricaoAtributo>
+            <ValorAtributo>string</ValorAtributo>
+          </Atributo>
+        </Atributos>
+```        
