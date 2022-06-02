@@ -76,7 +76,7 @@
   * Integração 1.1 Busca Item de Solicitação de Compra (Outbound)
     * URL PROD: https://api.sienge.com.br/produtoeinovacao/public/api/v1/purchase-requests/all/items
 
-* #Integração 2# Cria cotação de Preço (Inbound)
+* **Integração 2** Cria cotação de Preço (Inbound)
   * URL PROD: https://api.sienge.com.br/produtoeinovacao/public/api/v1/purchase-quotations
 
 Integração 4 Cria Negociação de Cotação de Preço com o Fornecedor (Inbound)
