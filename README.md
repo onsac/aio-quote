@@ -7,7 +7,7 @@
 <h3 align="center">AIO Quote</h3>
 
 <p align="center">
-  Automações e Integrações sem limitações (AIops/DEVops)
+  Projeto Integração ME + SIENGE
   <br>
   <a href="https://onsac.com/"><strong>Conheça mais sobre nosso serviço »</strong></a>
   </p>
