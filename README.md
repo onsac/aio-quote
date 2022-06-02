@@ -106,14 +106,23 @@
   
 ## AIO-QUOTE – Contrato de APIs Origem e Destino
 
-SIENGE Webhook 1 Envia autorização de pedido de compra - PURCHASE_ORDER_AUTHORIZATION_CHANGED : Sempre que a autorização do pedido de compra mudar
+**SIENGE Webhook 1** Envia autorização de pedido de compra
 
-AIO API POST : /api/cotação/purchaseOrder
-Payload  : { "purchaseOrderId" : int, "authorized": boolean } 
+PURCHASE_ORDER_AUTHORIZATION_CHANGED : Sempre que a autorização do pedido de compra mudar
 
+```sh  
+AIO-OPS API POST : http://<servidor aio>/api/cotação/purchaseOrder
+```
 
-Integração 1 Busca solicitação de Compras 
+```sh  
+Payload  :  { "purchaseOrderId" : int, "authorized": boolean } 
+```
+
+**Integração 1** Busca solicitação de Compras 
+
+```sh
 API GET: https://api.sienge.com.br/produtoeinovacao/public/api/v1/purchase-requests/{purchaseRequestId}
+```
 
 ```sh
 {
@@ -131,8 +140,12 @@ API GET: https://api.sienge.com.br/produtoeinovacao/public/api/v1/purchase-reque
   "modifiedAt": "2018-04-02T18:20:00.000-03:00"
 }
 ```
-Integração 2.1 Busca Item de Solicitação de Compra
-URL PROD: https://api.sienge.com.br/produtoeinovacao/public/api/v1/purchase-requests/all/items?purchaseRequestId={id}&buildingId={buildingId}
+
+**Integração 1.1** Busca Item de Solicitação de Compra
+
+```sh
+API GET: https://api.sienge.com.br/produtoeinovacao/public/api/v1/purchase-requests/all/items?purchaseRequestId={id}&buildingId={buildingId}
+```
 
 ```sh
 {
@@ -153,6 +166,7 @@ URL PROD: https://api.sienge.com.br/produtoeinovacao/public/api/v1/purchase-requ
   "links": [   {  "rel": "delivery-requirements",   "href": "http://../v1/purchase-requests/622/items/1/delivery-requirements"   }  ]
 }
 ```
+
 ## Integração 1 Envio da Requisição (Criação /Alteração /Cancelamento) do ERP ao ME (Outbound) 
 
 URL PROD: https://api.me.com.br/MEBrokerWebService/MEBrokerWebService.asmx?op=processarMensagemRequisicao 
