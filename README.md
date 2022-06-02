@@ -107,7 +107,7 @@
   
 ## AIO-QUOTE – Contrato de APIs Origem e Destino
 
-**SIENGE Webhook 1** Envia autorização de pedido de compra
+* **SIENGE Webhook 1** Envia autorização de pedido de compra
 
 PURCHASE_ORDER_AUTHORIZATION_CHANGED : Sempre que a autorização do pedido de compra mudar
 
@@ -119,7 +119,7 @@ AIO-OPS API POST : http://<servidor aio>/api/cotação/purchaseOrder
 Payload  :  { "purchaseOrderId" : int, "authorized": boolean } 
 ```
 
-**Integração 1** Busca solicitação de Compras 
+* **Integração 1** Busca solicitação de Compras 
 
 ```sh
 API GET: https://api.sienge.com.br/produtoeinovacao/public/api/v1/purchase-requests/{purchaseRequestId}
@@ -142,7 +142,7 @@ API GET: https://api.sienge.com.br/produtoeinovacao/public/api/v1/purchase-reque
 }
 ```
 
-**Integração 1.1** Busca Item de Solicitação de Compra
+* **Integração 1.1** Busca Item de Solicitação de Compra
 
 ```sh
 API GET: https://api.sienge.com.br/produtoeinovacao/public/api/v1/purchase-requests/all/items?purchaseRequestId={id}&buildingId={buildingId}
@@ -170,7 +170,7 @@ API GET: https://api.sienge.com.br/produtoeinovacao/public/api/v1/purchase-reque
 
 ## Integração 1 Envio da Requisição (Criação)
 
-**URL PROD:** https://api.me.com.br/MEBrokerWebService/MEBrokerWebService.asmx?op=processarMensagemRequisicao 
+* **URL PROD:** https://api.me.com.br/MEBrokerWebService/MEBrokerWebService.asmx?op=processarMensagemRequisicao 
 ```sh
  <soap12:Body>
     <processarMensagemRequisicao xmlns="http://www.me.com.br/WebServices">
@@ -523,39 +523,7 @@ API GET: https://api.sienge.com.br/produtoeinovacao/public/api/v1/purchase-reque
     </processarMensagemRequisicao>
   </soap12:Body>
 ```
-
-## Contrato de Request - PRESTES - Criação de COtação
-
-Este Contrato de Request, baseado na disponibilidade de atributos apresentado no topico acima, define quais são os atributos que serão enviados, os tipo de valores, e os domínios caso exista, os campos requeridos pelo ME para atender a está requisição também devem ser definodos neste contrato:
-
-```sh
-  <soap12:Body>
-    <processarMensagemRequisicao xmlns="http://www.me.com.br/WebServices">
-      <msgRequisicao>
-        ...
-        <LocalEntrega>
-          ...
-        <LocalEntregaBOrg>
-          ...
-        <CentroCustoBOrg>
-          ...
-        <Objetos>
-          ...
-        <Atributos>
-          ...
-        <ItensRequisicao>
-          ...
-        <BOrgs>
-          ...
-        <AprovadoresRequisicao>
-          ...
-        <LinkPersonalizado>
-          ...
-      </msgRequisicao>
-    </processarMensagemRequisicao>
-  </soap12:Body>  
-```
-**Integração 2** Envio de Pré -Pedido (Criação/Alteração) do ME ao ERP (Inbound)
+* **Integração 2** Envio de Pré -Pedido (Criação/Alteração) do ME ao ERP (Inbound)
 ```sh
 <soap12:Body>
     <getMessagePrePedidoResponse xmlns="http://www.me.com.br/WebServices">
@@ -801,3 +769,35 @@ Este Contrato de Request, baseado na disponibilidade de atributos apresentado no
     </getMessagePrePedidoResponse>
   </soap12:Body>
 ```
+## Contrato de Request - PRESTES - Criação de COtação
+
+>Este Contrato de Request, baseado na disponibilidade de atributos apresentado no topico acima, define quais são os atributos que serão enviados, os tipo de valores, e >os domínios caso exista, os campos requeridos pelo ME para atender a está requisição também devem ser definodos neste contrato:
+
+```sh
+  <soap12:Body>
+    <processarMensagemRequisicao xmlns="http://www.me.com.br/WebServices">
+      <msgRequisicao>
+        ...
+        <LocalEntrega>
+          ...
+        <LocalEntregaBOrg>
+          ...
+        <CentroCustoBOrg>
+          ...
+        <Objetos>
+          ...
+        <Atributos>
+          ...
+        <ItensRequisicao>
+          ...
+        <BOrgs>
+          ...
+        <AprovadoresRequisicao>
+          ...
+        <LinkPersonalizado>
+          ...
+      </msgRequisicao>
+    </processarMensagemRequisicao>
+  </soap12:Body>  
+```
+
