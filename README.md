@@ -12,15 +12,6 @@
   <a href="https://onsac.com/"><strong>Conheça mais sobre nosso serviço »</strong></a>
   </p>
   
-## Sumario 
-
-- [Topolodia da Solução](#topologia-da-solucao)
-- [Verifica e Configura PROXY](#verifica-e-configura-proxy)
-- [Instala e Configura AIO Integrador](#instala-e-configura-aio-integrador)
-- [Configura Ansible](#configura-ansible)
-- [Configura ControlM](#configura-controlm)
-- [Compatibilidade ControlM X Ansible](#compatibilidade-controlm-x-ansible)
-- [Integra com aio-ops](#integra-com-aio-ops)  
 
 ## Topologia da Solução
 
