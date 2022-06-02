@@ -555,4 +555,249 @@ Este Contrato de Request, baseado na disponibilidade de atributos apresentado no
     </processarMensagemRequisicao>
   </soap12:Body>  
 ```
-
+**Integração 2** Envio de Pré -Pedido (Criação/Alteração) do ME ao ERP (Inbound)
+```sh
+<soap12:Body>
+    <getMessagePrePedidoResponse xmlns="http://www.me.com.br/WebServices">
+      <getMessagePrePedidoResult>
+        <Token>string</Token>
+        <Message>
+          <PREPEDIDO>int</PREPEDIDO>
+          <STATUS>int</STATUS>
+          <CANCELADO>string</CANCELADO>
+          <IDENTIFIC>string</IDENTIFIC>
+          <IDFORNECEDOR>int</IDFORNECEDOR>
+          <FORNECEDOR>int</FORNECEDOR>
+          <RESUMO>string</RESUMO>
+          <DATAHORALIMITE>dateTime</DATAHORALIMITE>
+          <OBSCLI>string</OBSCLI>
+          <ICMS>double</ICMS>
+          <ICMS_INCLUSO>string</ICMS_INCLUSO>
+          <FRETE>string</FRETE>
+          <VALORFRETE>double</VALORFRETE>
+          <COND_PAGTO>string</COND_PAGTO>
+          <COND_ENTREGA>string</COND_ENTREGA>
+          <DATAENTREGA>dateTime</DATAENTREGA>
+          <VALIDADE>dateTime</VALIDADE>
+          <LOGIN>string</LOGIN>
+          <FORNECEDORCLIENTE>string</FORNECEDORCLIENTE>
+          <FORNECEDORCLIENTEPRINCIPAL>string</FORNECEDORCLIENTEPRINCIPAL>
+          <MOEDA>string</MOEDA>
+          <TAXACONVERSAO>double</TAXACONVERSAO>
+          <TAXACONVERSAOESTIMADA>double</TAXACONVERSAOESTIMADA>
+          <PRAZOENTREGA>int</PRAZOENTREGA>
+          <OBSRECUSA>string</OBSRECUSA>
+          <COTACAO>int</COTACAO>
+          <IDENTIFIC_COT>string</IDENTIFIC_COT>
+          <CENTRO>string</CENTRO>
+          <PROJETO>string</PROJETO>
+          <EMPRESA>string</EMPRESA>
+          <ORGANIZACAO_COMPRAS>string</ORGANIZACAO_COMPRAS>
+          <BORG_CENTRO>string</BORG_CENTRO>
+          <GRUPO_COMPRAS>string</GRUPO_COMPRAS>
+          <ALTERACAO>string</ALTERACAO>
+          <CODCOMPRFUP>string</CODCOMPRFUP>
+          <CNPJTRANSPORTADORA>string</CNPJTRANSPORTADORA>
+          <Atributos>
+            <Atributo xsi:nil="true" />
+            <Atributo xsi:nil="true" />
+          </Atributos>
+          <DATAHORAGERACAO>dateTime</DATAHORAGERACAO>
+          <LOCALENTREGACLIENTE>string</LOCALENTREGACLIENTE>
+          <LOCALCOBRANCACLIENTE>string</LOCALCOBRANCACLIENTE>
+          <LOCALREALCOBRANCA>string</LOCALREALCOBRANCA>
+          <LOCALFATURAMENTOCLIENTE>string</LOCALFATURAMENTOCLIENTE>
+          <TAG>string</TAG>
+          <CNPJFORNECEDOR>string</CNPJFORNECEDOR>
+          <CONTRATO>int</CONTRATO>
+          <CONTRATOCLIENTE>string</CONTRATOCLIENTE>
+          <AREAGESTORA>string</AREAGESTORA>
+          <TIPOPEDIDOCAT>string</TIPOPEDIDOCAT>
+          <MULTIPLASDATAS>string</MULTIPLASDATAS>
+          <CODTRANSPORTADORA>string</CODTRANSPORTADORA>
+          <IMPOSTOIVAINCLUSO>string</IMPOSTOIVAINCLUSO>
+          <IMPOSTOIVA>double</IMPOSTOIVA>
+          <JUSTIFICATIVA>string</JUSTIFICATIVA>
+          <CATEGORIA>string</CATEGORIA>
+          <CENTROCUSTOCLIENTE>string</CENTROCUSTOCLIENTE>
+          <FORNECEDORFRETE>string</FORNECEDORFRETE>
+          <FORNECEDORPARCEIRO>string</FORNECEDORPARCEIRO>
+          <FORNECEDORCLIENTEPARCEIRO>string</FORNECEDORCLIENTEPARCEIRO>
+          <FORNECEDORCLIENTEPARCEIROPRINCIPAL>string</FORNECEDORCLIENTEPARCEIROPRINCIPAL>
+          <REMESSAFUTURA>string</REMESSAFUTURA>
+          <PEDIDOFRETECLIENTE>string</PEDIDOFRETECLIENTE>
+          <LIMITEFATURAMENTO>double</LIMITEFATURAMENTO>
+          <FORNECEDORSUBSTITUTO>string</FORNECEDORSUBSTITUTO>
+          <BOrgs>
+            <BOrg xsi:nil="true" />
+            <BOrg xsi:nil="true" />
+          </BOrgs>
+          <Itens>
+            <ItemPrePedido xsi:nil="true" />
+            <ItemPrePedido xsi:nil="true" />
+          </Itens>
+          <RequisicoesPrePedido>
+            <RequisicaoPrePedido xsi:nil="true" />
+            <RequisicaoPrePedido xsi:nil="true" />
+          </RequisicoesPrePedido>
+          <CotacoesPrePedido>
+            <CotacaoPrePedido xsi:nil="true" />
+            <CotacaoPrePedido xsi:nil="true" />
+          </CotacoesPrePedido>
+          <MsgFornecedor>
+            <IDINTEGRACAO>int</IDINTEGRACAO>
+            <ContatosBorg xsi:nil="true" />
+            <IDFORNECEDOR>int</IDFORNECEDOR>
+            <FORNECEDORCLIENTE>string</FORNECEDORCLIENTE>
+            <NOME>string</NOME>
+            <RAZAO>string</RAZAO>
+            <CONTATO>string</CONTATO>
+            <ENDERECO>string</ENDERECO>
+            <ENDERECONUMERO>string</ENDERECONUMERO>
+            <ENDERECOCOMPLEMENTO>string</ENDERECOCOMPLEMENTO>
+            <CIDADE>string</CIDADE>
+            <REGIAO>string</REGIAO>
+            <ESTADO>string</ESTADO>
+            <PAIS>string</PAIS>
+            <CEP>string</CEP>
+            <CELULAR>string</CELULAR>
+            <CONTATO2>string</CONTATO2>
+            <EMAIL2>string</EMAIL2>
+            <BAIRRO>string</BAIRRO>
+            <TELEFONE>string</TELEFONE>
+            <FAX>string</FAX>
+            <URL>string</URL>
+            <EMAIL>string</EMAIL>
+            <CPF>string</CPF>
+            <CUIT>string</CUIT>
+            <CNPJ>string</CNPJ>
+            <RUT>string</RUT>
+            <CCM>string</CCM>
+            <IE>string</IE>
+            <ATIVIDADE>string</ATIVIDADE>
+            <BANCO>string</BANCO>
+            <AGENCIA>string</AGENCIA>
+            <CONTA>string</CONTA>
+            <PRACA>string</PRACA>
+            <INTERNACIONAL>int</INTERNACIONAL>
+            <GRUPO_FORNECEDOR>string</GRUPO_FORNECEDOR>
+            <DDI>string</DDI>
+            <BLOQUEADO>string</BLOQUEADO>
+            <POVOADO>string</POVOADO>
+            <FORNECEDOR>int</FORNECEDOR>
+            <OBSERVACAO>string</OBSERVACAO>
+            <NOMECORRENTISTA>string</NOMECORRENTISTA>
+            <DOCCORRENTISTA>string</DOCCORRENTISTA>
+            <BONIFICACAO>double</BONIFICACAO>
+            <CONDICAOPAGAMENTO>string</CONDICAOPAGAMENTO>
+            <TIPOALTERACAO>string</TIPOALTERACAO>
+            <LOGINRESPONSAVEL>string</LOGINRESPONSAVEL>
+            <UtilizaContasPagasPagar>string</UtilizaContasPagasPagar>
+            <BOrgItens xsi:nil="true" />
+            <ContasCorrente xsi:nil="true" />
+            <GruposProduto xsi:nil="true" />
+            <FornecedorEstrategico>string</FornecedorEstrategico>
+            <FornecedorContas xsi:nil="true" />
+            <IDF>double</IDF>
+            <Atributos xsi:nil="true" />
+            <MOEDA>string</MOEDA>
+            <EMAILSADICIONAIS>string</EMAILSADICIONAIS>
+            <EmailsPorProcesso xsi:nil="true" />
+            <MATERIALTREINAMENTO>string</MATERIALTREINAMENTO>
+            <TIPODOCUMENTO>string</TIPODOCUMENTO>
+            <NUMERODOCUMENTO>string</NUMERODOCUMENTO>
+            <EMAILCOBRANCA>string</EMAILCOBRANCA>
+            <ENDERECOCOBRANCA>string</ENDERECOCOBRANCA>
+            <CONTATOCOBRANCA>string</CONTATOCOBRANCA>
+            <STATUS_HOMOLOGACAO>string</STATUS_HOMOLOGACAO>
+            <CEPCOBRANCA>string</CEPCOBRANCA>
+            <MUNICIPIOCOBRANCA>string</MUNICIPIOCOBRANCA>
+            <ESTADOCOBRANCA>string</ESTADOCOBRANCA>
+            <PAISCOBRANCA>string</PAISCOBRANCA>
+            <TIPOPAGAMENTO>string</TIPOPAGAMENTO>
+            <NOTAMEDIA>string</NOTAMEDIA>
+            <BOrgPgtoItens xsi:nil="true" />
+            <LinkPersonalizado xsi:nil="true" />
+            <BOrgLocalFaturamento xsi:nil="true" />
+          </MsgFornecedor>
+          <FormasPagamento>
+            <FormaPagamentoPrePedido xsi:nil="true" />
+            <FormaPagamentoPrePedido xsi:nil="true" />
+          </FormasPagamento>
+          <AprovadoresPrePedido>
+            <WORKFLOW>int</WORKFLOW>
+            <IDFORNECEDOR>int</IDFORNECEDOR>
+            <AprovadorPrePedido xsi:nil="true" />
+          </AprovadoresPrePedido>
+          <LocaisEntregaPrePedido>
+            <LocalEntregaPrePedido xsi:nil="true" />
+          </LocaisEntregaPrePedido>
+          <LocaisCobrancaPrePedido>
+            <LocalCobrancaPrePedido xsi:nil="true" />
+          </LocaisCobrancaPrePedido>
+          <Propriedades>
+            <Propriedade xsi:nil="true" />
+            <Propriedade xsi:nil="true" />
+          </Propriedades>
+          <Objetos>
+            <Propriedade xsi:nil="true" />
+            <Propriedade xsi:nil="true" />
+          </Objetos>
+          <Textos>
+            <TextoGenerico xsi:nil="true" />
+            <TextoGenerico xsi:nil="true" />
+          </Textos>
+          <RelatorioNegociacao>
+            <TIPOPROCESSO>string</TIPOPROCESSO>
+            <RESPONSAVEL>string</RESPONSAVEL>
+            <CATEGORIARELATORIO>string</CATEGORIARELATORIO>
+            <OBJETO>string</OBJETO>
+            <OBSERVACAO>string</OBSERVACAO>
+            <OBSERVACAOAPROVADOR>string</OBSERVACAOAPROVADOR>
+            <OBSERVACAOGERAL>string</OBSERVACAOGERAL>
+            <DATAINICIALPRAZO>dateTime</DATAINICIALPRAZO>
+            <DATAFINALPRAZO>dateTime</DATAFINALPRAZO>
+            <CONTRATOCLIENTE>string</CONTRATOCLIENTE>
+            <VALORTOTAL>double</VALORTOTAL>
+          </RelatorioNegociacao>
+          <CustoAdicional>
+            <CustoAdicionalValor xsi:nil="true" />
+            <CustoAdicionalValor xsi:nil="true" />
+          </CustoAdicional>
+          <RequisicaoID>int</RequisicaoID>
+          <CAMPOREQUISICAOINTEGRADAPREPEDIDO>string</CAMPOREQUISICAOINTEGRADAPREPEDIDO>
+          <TIPODOCUMENTO>string</TIPODOCUMENTO>
+          <NOMEFICHEIROSIVA>string</NOMEFICHEIROSIVA>
+          <OPERACAO_COMERCIAL>string</OPERACAO_COMERCIAL>
+          <TIPOFORNECEDORPARCEIRO>string</TIPOFORNECEDORPARCEIRO>
+          <INVISIVEL>string</INVISIVEL>
+          <ELEMENTOPEP>string</ELEMENTOPEP>
+          <OBSERVACAOAPROVADOR>string</OBSERVACAOAPROVADOR>
+          <ColetaPreco>
+            <COTACAO>int</COTACAO>
+            <IDCOMPRADOR>int</IDCOMPRADOR>
+            <STATUSCOTACAO>int</STATUSCOTACAO>
+            <DATALEITURA>dateTime</DATALEITURA>
+            <COTACAOCLIENTE>string</COTACAOCLIENTE>
+            <COTACAO_ORIGINAL>int</COTACAO_ORIGINAL>
+            <GRUPO_COMPRAS>string</GRUPO_COMPRAS>
+            <RESUMO>string</RESUMO>
+            <CATEGORIA>string</CATEGORIA>
+            <DATACOLOCACAO>dateTime</DATACOLOCACAO>
+            <TAGCOMPRADOR>string</TAGCOMPRADOR>
+            <IDREQUISITANTE>int</IDREQUISITANTE>
+            <CODCLICOMPRADOR>string</CODCLICOMPRADOR>
+            <DATALIMITE>dateTime</DATALIMITE>
+            <PREPEDIDO>int</PREPEDIDO>
+            <BOrgs xsi:nil="true" />
+            <FornecedoresColeta xsi:nil="true" />
+            <RequisicoesColeta xsi:nil="true" />
+            <Propriedades xsi:nil="true" />
+            <Objetos xsi:nil="true" />
+          </ColetaPreco>
+          <OUTRASDESPESAS>double</OUTRASDESPESAS>
+        </Message>
+      </getMessagePrePedidoResult>
+    </getMessagePrePedidoResponse>
+  </soap12:Body>
+```
