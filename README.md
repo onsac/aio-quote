@@ -35,49 +35,49 @@
   * Integração 2.2 Retorno do Pedido aprovado do ERP ao ME (Outbound) 
     * URL PROD: https://api.me.com.br/MEBrokerWebService/MEBrokerWebService.asmx?op=processarMensagemStatusPrePedido 
 
-Integração 3 Envio de Cancelamento de Pedido do ME ao ERP (Inbound) 
-URL PROD: https://api.me.com.br/MEBrokerWebService/MEBrokerWebService.asmx?op=getMessagePedido 
+* Integração 3 Envio de Cancelamento de Pedido do ME ao ERP (Inbound) 
+  * URL PROD: https://api.me.com.br/MEBrokerWebService/MEBrokerWebService.asmx?op=getMessagePedido 
 
-Integração 3.1 Retorno do Status do Pedido de Erro/Inconsistência do ERP ao ME (Outbound) 
-URL PROD: https://api.me.com.br/MEBrokerWebService/MEBrokerWebService.asmx?op=getMessageStatusPedido 
+  * Integração 3.1 Retorno do Status do Pedido de Erro/Inconsistência do ERP ao ME (Outbound) 
+    * URL PROD: https://api.me.com.br/MEBrokerWebService/MEBrokerWebService.asmx?op=getMessageStatusPedido 
 
-Integração 4 Envio de Recebimento Físico do ERP ao ME (Outbound) 
-URL PROD: https://api.me.com.br/MEBrokerWebService/MEBrokerWebService.asmx?op=processarMensagemEntrega 
+* Integração 4 Envio de Recebimento Físico do ERP ao ME (Outbound) 
+  * URL PROD: https://api.me.com.br/MEBrokerWebService/MEBrokerWebService.asmx?op=processarMensagemEntrega 
 
-Integração 5 Envio do Contrato (Criação/Alteração) do ME ao ERP (Inbound) 
-URL PROD: https://api.me.com.br/MEBrokerWebService/MEBrokerWebService.asmx?op=processarMensagemContratoWF 
+* Integração 5 Envio do Contrato (Criação/Alteração) do ME ao ERP (Inbound) 
+  * URL PROD: https://api.me.com.br/MEBrokerWebService/MEBrokerWebService.asmx?op=processarMensagemContratoWF 
 
-Integração 5.1 Retorno do Status do Contrato de Erro/Inconsistência do ERP ao ME (Outbound) 
-URL PROD: https://api.me.com.br/MEBrokerWebService/MEBrokerWebService.asmx?op=getMessageStatusContrato 
+  * Integração 5.1 Retorno do Status do Contrato de Erro/Inconsistência do ERP ao ME (Outbound) 
+    * URL PROD: https://api.me.com.br/MEBrokerWebService/MEBrokerWebService.asmx?op=getMessageStatusContrato 
 
-Integração 6.2 Retorno do Contrato aprovado do ERP ao ME (Outbound) 
-URL PROD: https://api.me.com.br/MEBrokerWebService/MEBrokerWebService.asmx?op=getMessageStatusContrato 
+* Integração 6 Retorno do Contrato aprovado do ERP ao ME (Outbound) 
+  * URL PROD: https://api.me.com.br/MEBrokerWebService/MEBrokerWebService.asmx?op=getMessageStatusContrato 
 
-Integração 7 Envio de Contas a Pagar do ERP ao ME (Outbound) 
-URL PROD: https://api.me.com.br/MEBrokerWebService/MEBrokerWebService.asmx?op=processarMensagemContaAPagar 
+* Integração 7 Envio de Contas a Pagar do ERP ao ME (Outbound) 
+  * URL PROD: https://api.me.com.br/MEBrokerWebService/MEBrokerWebService.asmx?op=processarMensagemContaAPagar 
 
-Integração 8 Envio de Contas Pagas do ERP ao ME (Outbound) 
-URL PROD: https://api.me.com.br/MEBrokerWebService/MEBrokerWebService.asmx?op=processarMensagemContasPagasList 
+* Integração 8 Envio de Contas Pagas do ERP ao ME (Outbound) 
+  * URL PROD: https://api.me.com.br/MEBrokerWebService/MEBrokerWebService.asmx?op=processarMensagemContasPagasList 
 
-Integração 9 Carga de Fornecedores (Criação/Alteração/Bloqueio) do ERP ao ME (Outbound) 
-URL PROD: https://api.me.com.br/MEBrokerWebService/MEBrokerWebService.asmx?op=processarMensagemFornecedor 
+* Integração 9 Carga de Fornecedores (Criação/Alteração/Bloqueio) do ERP ao ME (Outbound) 
+  * URL PROD: https://api.me.com.br/MEBrokerWebService/MEBrokerWebService.asmx?op=processarMensagemFornecedor 
 
-Integração 10 Carga de Produtos (Criação/Alteração/Bloqueio) do ERP ao ME (Outbound) 
-URL PROD: https://api.me.com.br/MEBrokerWebService/MEBrokerWebService.asmx?op=processarMensagemProduto 
+* Integração 10 Carga de Produtos (Criação/Alteração/Bloqueio) do ERP ao ME (Outbound) 
+  * URL PROD: https://api.me.com.br/MEBrokerWebService/MEBrokerWebService.asmx?op=processarMensagemProduto 
 
-Integração 11 Carga de Objeto de Custo (Criação/Alteração/Bloqueio) do ERP ao ME (Outbound) 
-URL PROD: https://api.me.com.br/MEBrokerWebService/MEBrokerWebService.asmx?op=processarMensagemCentro_Custo
+* Integração 11 Carga de Objeto de Custo (Criação/Alteração/Bloqueio) do ERP ao ME (Outbound) 
+  * URL PROD: https://api.me.com.br/MEBrokerWebService/MEBrokerWebService.asmx?op=processarMensagemCentro_Custo
 
 ## APIs – SIENGE
 
-Integração 2 Busca solicitação de Compras (Outbound) 
-URL PROD: https://api.sienge.com.br/produtoeinovacao/public/api/v1/purchase-requests/{purchaseRequestId}
+* Integração 1 Busca solicitação de Compras (Outbound) 
+  * URL PROD: https://api.sienge.com.br/produtoeinovacao/public/api/v1/purchase-requests/{purchaseRequestId}
 
-Integração 2.1 Busca Item de Solicitação de Compra (Outbound)
-URL PROD: https://api.sienge.com.br/produtoeinovacao/public/api/v1/purchase-requests/all/items
+  * Integração 1.1 Busca Item de Solicitação de Compra (Outbound)
+    * URL PROD: https://api.sienge.com.br/produtoeinovacao/public/api/v1/purchase-requests/all/items
 
-Integração 3 Cria cotação de Preço (Inbound)
-URL PROD: https://api.sienge.com.br/produtoeinovacao/public/api/v1/purchase-quotations
+* #Integração 2# Cria cotação de Preço (Inbound)
+  * URL PROD: https://api.sienge.com.br/produtoeinovacao/public/api/v1/purchase-quotations
 
 Integração 4 Cria Negociação de Cotação de Preço com o Fornecedor (Inbound)
 URL PROD: https://api.sienge.com.br/produtoeinovacao/public/api/v1/purchase-quotations/{puchaseQuotationId}/suppliers/{supplierId}/negotiations
