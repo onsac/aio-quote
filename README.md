@@ -26,14 +26,14 @@
 * Integração 1 Envio da Requisição (Criação /Alteração /Cancelamento) do ERP ao ME (Outbound)
   * URL PROD: https://api.me.com.br/MEBrokerWebService/MEBrokerWebService.asmx?op=processarMensagemRequisicao 
 
-Integração 2 Envio de Pré -Pedido (Criação/Alteração) do ME ao ERP (Inbound) 
-URL PROD: https://api.me.com.br/MEBrokerWebService/MEBrokerWebService.asmx?op=getMessagePrePedido 
+* Integração 2 Envio de Pré -Pedido (Criação/Alteração) do ME ao ERP (Inbound) 
+  * URL PROD: https://api.me.com.br/MEBrokerWebService/MEBrokerWebService.asmx?op=getMessagePrePedido 
 
-Integração 2.1 Retorno do Status de Erro/Inconsistência do ERP ao ME (Outbound) 
-URL PROD: https://api.me.com.br/MEBrokerWebService/MEBrokerWebService.asmx?op=processarMensagemStatusPrePedido 
+  * Integração 2.1 Retorno do Status de Erro/Inconsistência do ERP ao ME (Outbound) 
+    * URL PROD: https://api.me.com.br/MEBrokerWebService/MEBrokerWebService.asmx?op=processarMensagemStatusPrePedido 
 
-Integração 2.2 Retorno do Pedido aprovado do ERP ao ME (Outbound) 
-URL PROD: https://api.me.com.br/MEBrokerWebService/MEBrokerWebService.asmx?op=processarMensagemStatusPrePedido 
+  * Integração 2.2 Retorno do Pedido aprovado do ERP ao ME (Outbound) 
+    * URL PROD: https://api.me.com.br/MEBrokerWebService/MEBrokerWebService.asmx?op=processarMensagemStatusPrePedido 
 
 Integração 3 Envio de Cancelamento de Pedido do ME ao ERP (Inbound) 
 URL PROD: https://api.me.com.br/MEBrokerWebService/MEBrokerWebService.asmx?op=getMessagePedido 
