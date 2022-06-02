@@ -282,4 +282,243 @@ URL PROD: https://api.me.com.br/MEBrokerWebService/MEBrokerWebService.asmx?op=pr
             <ValorAtributo>string</ValorAtributo>
           </Atributo>
         </Atributos>
+        <ItensRequisicao>
+          <ItemRequisicao>
+            <CANCELADO>string</CANCELADO>
+            <QUANTIDADE>double</QUANTIDADE>
+            <DESCRICAO>string</DESCRICAO>
+            <COMPLEMENTO>string</COMPLEMENTO>
+            <UNIDADE>string</UNIDADE>
+            <UNIDADEALTERNATIVA>string</UNIDADEALTERNATIVA>
+            <FABRICANTES>string</FABRICANTES>
+            <FABRICANTES_CODIGO>string</FABRICANTES_CODIGO>
+            <FABRICANTES_HOMOLOGADO>string</FABRICANTES_HOMOLOGADO>
+            <CODIGO_GRUPO>string</CODIGO_GRUPO>
+            <GRUPO_PRODUTO>string</GRUPO_PRODUTO>
+            <PRAZOESTIMADO>int</PRAZOESTIMADO>
+            <PRECOESTIMADO>double</PRECOESTIMADO>
+            <REATIVO>string</REATIVO>
+            <ALTERACAO>string</ALTERACAO>
+            <DATAHORAALTERACAO>dateTime</DATAHORAALTERACAO>
+            <NUMEROITEM>int</NUMEROITEM>
+            <GENERICO>string</GENERICO>
+            <MOEDA>string</MOEDA>
+            <APLICACAO_MATERIAL>string</APLICACAO_MATERIAL>
+            <FUP>int</FUP>
+            <CODIGO_PRODUTO>string</CODIGO_PRODUTO>
+            <CODIGOPRODUTOCLIENTE>string</CODIGOPRODUTOCLIENTE>
+            <NBM>string</NBM>
+            <STATUS>int</STATUS>
+            <COTACAOCONTRATO>int</COTACAOCONTRATO>
+            <IDENTIFICCONTRATO>string</IDENTIFICCONTRATO>
+            <NUMEROITEMCONTRATO>int</NUMEROITEMCONTRATO>
+            <IMOBILIZADO>int</IMOBILIZADO>
+            <CATEGORIAMATERIAL>string</CATEGORIAMATERIAL>
+            <CONTRATOCLIENTE>string</CONTRATOCLIENTE>
+            <ITEMCONTRATO>int</ITEMCONTRATO>
+            <UTILIZACAO_MATERIAL>string</UTILIZACAO_MATERIAL>
+            <CONTARAZAO>string</CONTARAZAO>
+            <IDENTIFIC_COT>string</IDENTIFIC_COT>
+            <OBSCLI>string</OBSCLI>
+            <CENTROCUSTOCLIENTE>string</CENTROCUSTOCLIENTE>
+            <PEDIDOCLIENTE>string</PEDIDOCLIENTE>
+            <NUMEROITEMPEDIDO>int</NUMEROITEMPEDIDO>
+            <CATEGORIACONTABIL>string</CATEGORIACONTABIL>
+            <CONTACONTABILCLIENTE>string</CONTACONTABILCLIENTE>
+            <GRUPO_COMPRAS>string</GRUPO_COMPRAS>
+            <PEP>string</PEP>
+            <ORIGEMMATERIAL>int</ORIGEMMATERIAL>
+            <CODIGO_GRUPO_PAI>string</CODIGO_GRUPO_PAI>
+            <GRUPO_PRODUTO_PAI>string</GRUPO_PRODUTO_PAI>
+            <CODIGO_GRUPO_PAI_2>string</CODIGO_GRUPO_PAI_2>
+            <GRUPO_PRODUTO_PAI_2>string</GRUPO_PRODUTO_PAI_2>
+            <PRODUTOBORGCODE>string</PRODUTOBORGCODE>
+            <PRODUTOBORGFIELD>string</PRODUTOBORGFIELD>
+            <CONTRATOSEL>int</CONTRATOSEL>
+            <CONTRATOCLIENTESEL>string</CONTRATOCLIENTESEL>
+            <ITEMCONTRATOSEL>int</ITEMCONTRATOSEL>
+            <LocalEntregaItem>string</LocalEntregaItem>
+            <LocalEntrega xsi:nil="true" />
+            <LOCALENTREGACLIENTE>string</LOCALENTREGACLIENTE>
+            <DATACOLOCACAO>dateTime</DATACOLOCACAO>
+            <FORNECEDORCLIENTE>string</FORNECEDORCLIENTE>
+            <DATAESPERADA>dateTime</DATAESPERADA>
+            <LocalEntregaBOrg xsi:nil="true" />
+            <CentroCustoBOrg xsi:nil="true" />
+            <CodigoProdutoBOrg xsi:nil="true" />
+            <TipoExportacao xsi:nil="true" />
+            <Objetos xsi:nil="true" />
+            <Atributos xsi:nil="true" />
+            <RemocaoSubItens xsi:nil="true" />
+            <CancelarItens xsi:nil="true" />
+            <SubItens xsi:nil="true" />
+            <Anexos xsi:nil="true" />
+            <Entregas xsi:nil="true" />
+            <RateioCC xsi:nil="true" />
+            <RateioOI xsi:nil="true" />
+            <ObjetosCusto xsi:nil="true" />
+            <BOrgs xsi:nil="true" />
+            <ProdutosBorgs xsi:nil="true" />
+            <SERVICO>string</SERVICO>
+            <CODIGOAF>string</CODIGOAF>
+            <CODIGOFORNECEDORPARCEIRO>string</CODIGOFORNECEDORPARCEIRO>
+            <GruposItem xsi:nil="true" />
+            <TIPODOC>string</TIPODOC>
+            <CODIGOIVA>string</CODIGOIVA>
+            <IMPOSTOIVA>double</IMPOSTOIVA>
+            <NAOGERAPREPEDIDOAUTOMATICO>string</NAOGERAPREPEDIDOAUTOMATICO>
+            <PRIORIDADECOMPRA>int</PRIORIDADECOMPRA>
+            <SOLICITACANCELAMENTO>string</SOLICITACANCELAMENTO>
+            <DRAWBACK>string</DRAWBACK>
+            <CATALOGTRADUCAO xsi:nil="true" />
+            <PRODUTO>int</PRODUTO>
+            <LOCALFATURAMENTOCLIENTE>string</LOCALFATURAMENTOCLIENTE>
+            <LinkPersonalizado xsi:nil="true" />
+          </ItemRequisicao>
+          <ItemRequisicao>
+            <CANCELADO>string</CANCELADO>
+            <QUANTIDADE>double</QUANTIDADE>
+            <DESCRICAO>string</DESCRICAO>
+            <COMPLEMENTO>string</COMPLEMENTO>
+            <UNIDADE>string</UNIDADE>
+            <UNIDADEALTERNATIVA>string</UNIDADEALTERNATIVA>
+            <FABRICANTES>string</FABRICANTES>
+            <FABRICANTES_CODIGO>string</FABRICANTES_CODIGO>
+            <FABRICANTES_HOMOLOGADO>string</FABRICANTES_HOMOLOGADO>
+            <CODIGO_GRUPO>string</CODIGO_GRUPO>
+            <GRUPO_PRODUTO>string</GRUPO_PRODUTO>
+            <PRAZOESTIMADO>int</PRAZOESTIMADO>
+            <PRECOESTIMADO>double</PRECOESTIMADO>
+            <REATIVO>string</REATIVO>
+            <ALTERACAO>string</ALTERACAO>
+            <DATAHORAALTERACAO>dateTime</DATAHORAALTERACAO>
+            <NUMEROITEM>int</NUMEROITEM>
+            <GENERICO>string</GENERICO>
+            <MOEDA>string</MOEDA>
+            <APLICACAO_MATERIAL>string</APLICACAO_MATERIAL>
+            <FUP>int</FUP>
+            <CODIGO_PRODUTO>string</CODIGO_PRODUTO>
+            <CODIGOPRODUTOCLIENTE>string</CODIGOPRODUTOCLIENTE>
+            <NBM>string</NBM>
+            <STATUS>int</STATUS>
+            <COTACAOCONTRATO>int</COTACAOCONTRATO>
+            <IDENTIFICCONTRATO>string</IDENTIFICCONTRATO>
+            <NUMEROITEMCONTRATO>int</NUMEROITEMCONTRATO>
+            <IMOBILIZADO>int</IMOBILIZADO>
+            <CATEGORIAMATERIAL>string</CATEGORIAMATERIAL>
+            <CONTRATOCLIENTE>string</CONTRATOCLIENTE>
+            <ITEMCONTRATO>int</ITEMCONTRATO>
+            <UTILIZACAO_MATERIAL>string</UTILIZACAO_MATERIAL>
+            <CONTARAZAO>string</CONTARAZAO>
+            <IDENTIFIC_COT>string</IDENTIFIC_COT>
+            <OBSCLI>string</OBSCLI>
+            <CENTROCUSTOCLIENTE>string</CENTROCUSTOCLIENTE>
+            <PEDIDOCLIENTE>string</PEDIDOCLIENTE>
+            <NUMEROITEMPEDIDO>int</NUMEROITEMPEDIDO>
+            <CATEGORIACONTABIL>string</CATEGORIACONTABIL>
+            <CONTACONTABILCLIENTE>string</CONTACONTABILCLIENTE>
+            <GRUPO_COMPRAS>string</GRUPO_COMPRAS>
+            <PEP>string</PEP>
+            <ORIGEMMATERIAL>int</ORIGEMMATERIAL>
+            <CODIGO_GRUPO_PAI>string</CODIGO_GRUPO_PAI>
+            <GRUPO_PRODUTO_PAI>string</GRUPO_PRODUTO_PAI>
+            <CODIGO_GRUPO_PAI_2>string</CODIGO_GRUPO_PAI_2>
+            <GRUPO_PRODUTO_PAI_2>string</GRUPO_PRODUTO_PAI_2>
+            <PRODUTOBORGCODE>string</PRODUTOBORGCODE>
+            <PRODUTOBORGFIELD>string</PRODUTOBORGFIELD>
+            <CONTRATOSEL>int</CONTRATOSEL>
+            <CONTRATOCLIENTESEL>string</CONTRATOCLIENTESEL>
+            <ITEMCONTRATOSEL>int</ITEMCONTRATOSEL>
+            <LocalEntregaItem>string</LocalEntregaItem>
+            <LocalEntrega xsi:nil="true" />
+            <LOCALENTREGACLIENTE>string</LOCALENTREGACLIENTE>
+            <DATACOLOCACAO>dateTime</DATACOLOCACAO>
+            <FORNECEDORCLIENTE>string</FORNECEDORCLIENTE>
+            <DATAESPERADA>dateTime</DATAESPERADA>
+            <LocalEntregaBOrg xsi:nil="true" />
+            <CentroCustoBOrg xsi:nil="true" />
+            <CodigoProdutoBOrg xsi:nil="true" />
+            <TipoExportacao xsi:nil="true" />
+            <Objetos xsi:nil="true" />
+            <Atributos xsi:nil="true" />
+            <RemocaoSubItens xsi:nil="true" />
+            <CancelarItens xsi:nil="true" />
+            <SubItens xsi:nil="true" />
+            <Anexos xsi:nil="true" />
+            <Entregas xsi:nil="true" />
+            <RateioCC xsi:nil="true" />
+            <RateioOI xsi:nil="true" />
+            <ObjetosCusto xsi:nil="true" />
+            <BOrgs xsi:nil="true" />
+            <ProdutosBorgs xsi:nil="true" />
+            <SERVICO>string</SERVICO>
+            <CODIGOAF>string</CODIGOAF>
+            <CODIGOFORNECEDORPARCEIRO>string</CODIGOFORNECEDORPARCEIRO>
+            <GruposItem xsi:nil="true" />
+            <TIPODOC>string</TIPODOC>
+            <CODIGOIVA>string</CODIGOIVA>
+            <IMPOSTOIVA>double</IMPOSTOIVA>
+            <NAOGERAPREPEDIDOAUTOMATICO>string</NAOGERAPREPEDIDOAUTOMATICO>
+            <PRIORIDADECOMPRA>int</PRIORIDADECOMPRA>
+            <SOLICITACANCELAMENTO>string</SOLICITACANCELAMENTO>
+            <DRAWBACK>string</DRAWBACK>
+            <CATALOGTRADUCAO xsi:nil="true" />
+            <PRODUTO>int</PRODUTO>
+            <LOCALFATURAMENTOCLIENTE>string</LOCALFATURAMENTOCLIENTE>
+            <LinkPersonalizado xsi:nil="true" />
+          </ItemRequisicao>
+        </ItensRequisicao>
+        <BOrgs>
+          <BOrg>
+            <CodigoBOrg>string</CodigoBOrg>
+            <DescricaoBOrg>string</DescricaoBOrg>
+            <DescricaoVEnt>string</DescricaoVEnt>
+            <CampoVEnt>string</CampoVEnt>
+            <TipoEntidade>string</TipoEntidade>
+            <BOrgID>int</BOrgID>
+          </BOrg>
+          <BOrg>
+            <CodigoBOrg>string</CodigoBOrg>
+            <DescricaoBOrg>string</DescricaoBOrg>
+            <DescricaoVEnt>string</DescricaoVEnt>
+            <CampoVEnt>string</CampoVEnt>
+            <TipoEntidade>string</TipoEntidade>
+            <BOrgID>int</BOrgID>
+          </BOrg>
+        </BOrgs>
+        <REQUISICAOSAP>string</REQUISICAOSAP>
+        <EMERGENCIAL>string</EMERGENCIAL>
+        <CAMPOREQUISICAOINTEGRADA>string</CAMPOREQUISICAOINTEGRADA>
+        <TIPODOCUMENTO>string</TIPODOCUMENTO>
+        <NOMEFICHEIROSIVA>string</NOMEFICHEIROSIVA>
+        <ORDEM>string</ORDEM>
+        <PEP>string</PEP>
+        <TITULO>string</TITULO>
+        <INVISIVEL>string</INVISIVEL>
+        <CONDPAG>string</CONDPAG>
+        <IDFORNECEDOR>int</IDFORNECEDOR>
+        <MOEDA>string</MOEDA>
+        <AprovadoresRequisicao>
+          <WORKFLOW>int</WORKFLOW>
+          <IDFORNECEDOR>int</IDFORNECEDOR>
+          <AprovadorRequisicao>
+            <AprovadorRequisicao xsi:nil="true" />
+            <AprovadorRequisicao xsi:nil="true" />
+          </AprovadorRequisicao>
+        </AprovadoresRequisicao>
+        <LinkPersonalizado>
+          <LinkPersonalizado>
+            <URL>string</URL>
+            <TITULO>string</TITULO>
+            <TIPO>string</TIPO>
+          </LinkPersonalizado>
+          <LinkPersonalizado>
+            <URL>string</URL>
+            <TITULO>string</TITULO>
+            <TIPO>string</TIPO>
+          </LinkPersonalizado>
+        </LinkPersonalizado>
+      </msgRequisicao>
+    </processarMensagemRequisicao>
+  </soap12:Body>
 ```        
