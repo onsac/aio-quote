@@ -168,9 +168,10 @@ API GET: https://api.sienge.com.br/produtoeinovacao/public/api/v1/purchase-reque
 }
 ```
 
-## Integração 1 Envio da Requisição (Criação)
+## Integração 2 Envio da Requisição (Criação)
 
-* **URL PROD:** https://api.me.com.br/MEBrokerWebService/MEBrokerWebService.asmx?op=processarMensagemRequisicao 
+* **URL API ME POST** : https://api.me.com.br/MEBrokerWebService/MEBrokerWebService.asmx?op=processarMensagemRequisicao 
+
 ```sh
  <soap12:Body>
     <processarMensagemRequisicao xmlns="http://www.me.com.br/WebServices">
@@ -523,7 +524,10 @@ API GET: https://api.sienge.com.br/produtoeinovacao/public/api/v1/purchase-reque
     </processarMensagemRequisicao>
   </soap12:Body>
 ```
-## Integração 2** Envio de Pré -Pedido (Criação/Alteração) do ME ao ERP (Inbound)
+## **Integração 2** Envio de Pré -Pedido (Criado) do ME ao ERP (Inbound)
+
+* **URL API ME GET** : https://api.me.com.br/MEBrokerWebService/MEBrokerWebService.asmx?op=getMessagePrePedido
+
 ```sh
 <soap12:Body>
     <getMessagePrePedidoResponse xmlns="http://www.me.com.br/WebServices">
@@ -771,7 +775,7 @@ API GET: https://api.sienge.com.br/produtoeinovacao/public/api/v1/purchase-reque
 ```
 ## Contrato de Request - PRESTES - Criação de COtação
 
->Este Contrato de Request, baseado na disponibilidade de atributos apresentado no topico acima, define quais são os atributos que serão enviados, os tipo de valores, e >os domínios caso exista, os campos requeridos pelo ME para atender a está requisição também devem ser definodos neste contrato:
+>Este Contrato de Request, baseado na disponibilidade de atributos apresentado na API **processarMensagemRequisicao**, define quais são os atributos que serão enviados, os tipo de valores, e os domínios caso exista, os campos requeridos pelo ME para atender a está requisição também devem ser definodos neste contrato:
 
 ```sh
   <soap12:Body>
@@ -801,3 +805,53 @@ API GET: https://api.sienge.com.br/produtoeinovacao/public/api/v1/purchase-reque
   </soap12:Body>  
 ```
 
+## Contrato de Response - PRESTES - Pré Pedido de Cotação
+
+>Este Contrato de Response, baseado na disponibilidade de atributos apresentado na API **getMessagePrePedidoResponse**,  define quais são os atributos que serão enviados, os tipo de valores, e o domínio caso exista, os campos requeridos pelo SIENGE para atender a está requisição também devem ser definodos neste contrato:
+
+```sh
+  <soap12:Body>
+    <getMessagePrePedidoResponse xmlns="http://www.me.com.br/WebServices">
+      <getMessagePrePedidoResult>
+        <Token>string</Token>
+        <Message>
+		      ...
+		      <Atributos>
+		      ...
+		      <BOrgs>
+		      ...
+		      <Itens>
+		      ...
+		      <RequisicoesPrePedido>
+		      ...
+		      <CotacoesPrePedido>
+		      ...
+		      <MsgFornecedor>
+		      ...
+		      <FormasPagamento>
+		      ...
+		      <AprovadoresPrePedido>
+		      ...
+          <LocaisEntregaPrePedido>
+		      ...
+          <LocaisCobrancaPrePedido>
+		      ...
+		      <Propriedades>
+		      ...
+		      <Objetos>
+		      ...
+		      <Textos>
+		      ...
+		      <RelatorioNegociacao>
+		      ...
+          <CustoAdicional>
+		      ...
+		      <RequisicaoID>int</RequisicaoID>
+		      ...
+		      <ColetaPreco>
+		      ...
+		    </Message>
+      </getMessagePrePedidoResult>
+    </getMessagePrePedidoResponse>
+  </soap12:Body>
+```         
