@@ -107,8 +107,7 @@
   
 ## AIO-QUOTE – Contrato de APIs Origem e Destino
 
-* **SIENGE Webhook 1** Envia autorização de pedido de compra
-
+> **SIENGE Webhook 1** Envia autorização de pedido de compra
 PURCHASE_ORDER_AUTHORIZATION_CHANGED : Sempre que a autorização do pedido de compra mudar
 
 ```sh  
@@ -119,7 +118,7 @@ AIO-OPS API POST : http://<servidor aio>/api/cotação/purchaseOrder
 Payload  :  { "purchaseOrderId" : int, "authorized": boolean } 
 ```
 
-* **Integração 1** Busca solicitação de Compras 
+> **Integração 1** : Busca solicitação de Compras 
 
 ```sh
 API GET: https://api.sienge.com.br/produtoeinovacao/public/api/v1/purchase-requests/{purchaseRequestId}
@@ -142,7 +141,7 @@ API GET: https://api.sienge.com.br/produtoeinovacao/public/api/v1/purchase-reque
 }
 ```
 
-* **Integração 1.1** Busca Item de Solicitação de Compra
+> **Integração 1.1** : Busca Item de Solicitação de Compra
 
 ```sh
 API GET: https://api.sienge.com.br/produtoeinovacao/public/api/v1/purchase-requests/all/items?purchaseRequestId={id}&buildingId={buildingId}
@@ -168,9 +167,8 @@ API GET: https://api.sienge.com.br/produtoeinovacao/public/api/v1/purchase-reque
 }
 ```
 
-## Integração 2 Envio da Requisição (Criação)
-
-* **URL API ME POST** : https://api.me.com.br/MEBrokerWebService/MEBrokerWebService.asmx?op=processarMensagemRequisicao 
+> **Integração 2** : Envio da Requisição (Criação)
+  **URL API ME POST** : https://api.me.com.br/MEBrokerWebService/MEBrokerWebService.asmx?op=processarMensagemRequisicao 
 
 ```sh
  <soap12:Body>
@@ -524,9 +522,8 @@ API GET: https://api.sienge.com.br/produtoeinovacao/public/api/v1/purchase-reque
     </processarMensagemRequisicao>
   </soap12:Body>
 ```
-## **Integração 2** Envio de Pré -Pedido (Criado) do ME ao ERP (Inbound)
-
-* **URL API ME GET** : https://api.me.com.br/MEBrokerWebService/MEBrokerWebService.asmx?op=getMessagePrePedido
+> **Integração 3** : Envio de Pré -Pedido (Criado) do ME ao ERP (Inbound)
+  **URL API ME GET** : https://api.me.com.br/MEBrokerWebService/MEBrokerWebService.asmx?op=getMessagePrePedido
 
 ```sh
 <soap12:Body>
@@ -773,7 +770,9 @@ API GET: https://api.sienge.com.br/produtoeinovacao/public/api/v1/purchase-reque
     </getMessagePrePedidoResponse>
   </soap12:Body>
 ```
-## **Integração 3** Mensagem Fornecedor
+> **Integração 3**    : Envio de Fornecedor
+  **URL API ME POST** : https://api.me.com.br/MEBrokerWebService/MEBrokerWebService.asmx?op=processarMensagemFornecedor
+
 ```sh
 <soap12:Body>
     <processarMensagemFornecedor xmlns="http://www.me.com.br/WebServices">
@@ -1002,7 +1001,9 @@ API GET: https://api.sienge.com.br/produtoeinovacao/public/api/v1/purchase-reque
     </processarMensagemFornecedor>
   </soap12:Body>
 ```
-## **Integração 4** Mensagem Produto
+> **Integração 4**    : Envio de Produto
+  **URL API ME POST** : https://api.me.com.br/MEBrokerWebService/MEBrokerWebService.asmx?op=processarMensagemProduto
+
 ```sh
 <soap12:Body>
     <processarMensagemProduto xmlns="http://www.me.com.br/WebServices">
@@ -1355,6 +1356,13 @@ API GET: https://api.sienge.com.br/produtoeinovacao/public/api/v1/purchase-reque
     </processarMensagemProduto>
   </soap12:Body>
 ```  
+> **Integração 5**       : Pequisa de Fornecedor
+  **URL API SIENGE GET** : https://api.sienge.com.br/produtoeinovacao/public/api/v1/?????
+  [Não encontamos no cardeno de APIs SIENGE (https://api.sienge.com.br/docs)]
+
+> **Integração 6**    : Pesquisa de Produto
+  **URL API SIENGE GET** : https://api.sienge.com.br/produtoeinovacao/public/api/v1/?????
+  [Não encontamos no cardeno de APIs SIENGE (https://api.sienge.com.br/docs)]
 
 ## Contrato de Request - PRESTES - Criação de Cotação
 
@@ -1438,7 +1446,7 @@ API GET: https://api.sienge.com.br/produtoeinovacao/public/api/v1/purchase-reque
     </getMessagePrePedidoResponse>
   </soap12:Body>
 ```         
-## Contrato de Response - PRESTES - Mensagem Fornecedor
+## Contrato de Request - PRESTES - Fornecedor
 
 >Este Contrato de Response, baseado na disponibilidade de atributos apresentado na API **processarMensagemFornecedor**,  define quais são os atributos que serão enviados, os tipo de valores, e o domínio caso exista, os campos requeridos pelo SIENGE para atender a está requisição também devem ser definodos neste contrato:
 
@@ -1581,7 +1589,7 @@ API GET: https://api.sienge.com.br/produtoeinovacao/public/api/v1/purchase-reque
     </processarMensagemFornecedor>
   </soap12:Body>
 ```
-## Contrato de Response - PRESTES - Mensagem Produto
+## Contrato de Request - PRESTES - Produto
 
 >Este Contrato de Response, baseado na disponibilidade de atributos apresentado na API **processarMensagemProduto**,  define quais são os atributos que serão enviados, os tipo de valores, e o domínio caso exista, os campos requeridos pelo SIENGE para atender a está requisição também devem ser definodos neste contrato:
 
