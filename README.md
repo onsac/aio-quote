@@ -168,7 +168,10 @@ API GET: https://api.sienge.com.br/produtoeinovacao/public/api/v1/purchase-reque
 ```
 
 > **Integração 2** : Envio da Requisição (Criação)
-  **URL API ME POST** : https://api.me.com.br/MEBrokerWebService/MEBrokerWebService.asmx?op=processarMensagemRequisicao 
+
+```diff
++ **URL API ME POST** : https://api.me.com.br/MEBrokerWebService/MEBrokerWebService.asmx?op=processarMensagemRequisicao 
+```
 
 ```sh
  <soap12:Body>
@@ -523,7 +526,10 @@ API GET: https://api.sienge.com.br/produtoeinovacao/public/api/v1/purchase-reque
   </soap12:Body>
 ```
 > **Integração 3** : Envio de Pré -Pedido (Criado) do ME ao ERP (Inbound)
-  **URL API ME GET** : https://api.me.com.br/MEBrokerWebService/MEBrokerWebService.asmx?op=getMessagePrePedido
+
+```diff
++ **URL API ME GET** : https://api.me.com.br/MEBrokerWebService/MEBrokerWebService.asmx?op=getMessagePrePedido
+```
 
 ```sh
 <soap12:Body>
@@ -771,8 +777,10 @@ API GET: https://api.sienge.com.br/produtoeinovacao/public/api/v1/purchase-reque
   </soap12:Body>
 ```
 > **Integração 3**    : Envio de Fornecedor
-  
+
+```diff
 + **URL API ME POST** : https://api.me.com.br/MEBrokerWebService/MEBrokerWebService.asmx?op=processarMensagemFornecedor
+```
 
 ```sh
 <soap12:Body>
@@ -1003,8 +1011,10 @@ API GET: https://api.sienge.com.br/produtoeinovacao/public/api/v1/purchase-reque
   </soap12:Body>
 ```
 > **Integração 4**    : Envio de Produto
-  
+
+```diff
 + **URL API ME POST** : https://api.me.com.br/MEBrokerWebService/MEBrokerWebService.asmx?op=processarMensagemProduto
+```
 
 ```sh
 <soap12:Body>
@@ -1360,13 +1370,17 @@ API GET: https://api.sienge.com.br/produtoeinovacao/public/api/v1/purchase-reque
 ```  
 > **Integração 5**       : Pequisa de Fornecedor
   
+```diff  
 - **URL API SIENGE GET** : https://api.sienge.com.br/produtoeinovacao/public/api/v1/?????
 - Não encontamos no cardeno de APIs SIENGE (https://api.sienge.com.br/docs)
+```
 
 > **Integração 6**    : Pesquisa de Produto
 
+```diff
 - **URL API SIENGE GET** : https://api.sienge.com.br/produtoeinovacao/public/api/v1/?????
 - Não encontamos no cardeno de APIs SIENGE (https://api.sienge.com.br/docs)
+```
 
 ## Contrato de Request - PRESTES - Criação de Cotação
 
