@@ -771,7 +771,8 @@ API GET: https://api.sienge.com.br/produtoeinovacao/public/api/v1/purchase-reque
   </soap12:Body>
 ```
 > **Integração 3**    : Envio de Fornecedor
-  **URL API ME POST** : https://api.me.com.br/MEBrokerWebService/MEBrokerWebService.asmx?op=processarMensagemFornecedor
+  
++ **URL API ME POST** : https://api.me.com.br/MEBrokerWebService/MEBrokerWebService.asmx?op=processarMensagemFornecedor
 
 ```sh
 <soap12:Body>
@@ -1002,7 +1003,8 @@ API GET: https://api.sienge.com.br/produtoeinovacao/public/api/v1/purchase-reque
   </soap12:Body>
 ```
 > **Integração 4**    : Envio de Produto
-  **URL API ME POST** : https://api.me.com.br/MEBrokerWebService/MEBrokerWebService.asmx?op=processarMensagemProduto
+  
++ **URL API ME POST** : https://api.me.com.br/MEBrokerWebService/MEBrokerWebService.asmx?op=processarMensagemProduto
 
 ```sh
 <soap12:Body>
@@ -1357,12 +1359,14 @@ API GET: https://api.sienge.com.br/produtoeinovacao/public/api/v1/purchase-reque
   </soap12:Body>
 ```  
 > **Integração 5**       : Pequisa de Fornecedor
-  **URL API SIENGE GET** : https://api.sienge.com.br/produtoeinovacao/public/api/v1/?????
-  [Não encontamos no cardeno de APIs SIENGE (https://api.sienge.com.br/docs)]
+  
+- **URL API SIENGE GET** : https://api.sienge.com.br/produtoeinovacao/public/api/v1/?????
+- Não encontamos no cardeno de APIs SIENGE (https://api.sienge.com.br/docs)
 
 > **Integração 6**    : Pesquisa de Produto
-  **URL API SIENGE GET** : https://api.sienge.com.br/produtoeinovacao/public/api/v1/?????
-  [Não encontamos no cardeno de APIs SIENGE (https://api.sienge.com.br/docs)]
+
+- **URL API SIENGE GET** : https://api.sienge.com.br/produtoeinovacao/public/api/v1/?????
+- Não encontamos no cardeno de APIs SIENGE (https://api.sienge.com.br/docs)
 
 ## Contrato de Request - PRESTES - Criação de Cotação
 
