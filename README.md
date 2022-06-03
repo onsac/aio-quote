@@ -120,8 +120,8 @@ Payload  :  { "purchaseOrderId" : int, "authorized": boolean }
 
 > **Integração 1** : Busca solicitação de Compras 
 
-```sh
-API GET: https://api.sienge.com.br/produtoeinovacao/public/api/v1/purchase-requests/{purchaseRequestId}
+```diff
++ API GET: https://api.sienge.com.br/produtoeinovacao/public/api/v1/purchase-requests/{purchaseRequestId}
 ```
 
 ```sh
@@ -143,8 +143,8 @@ API GET: https://api.sienge.com.br/produtoeinovacao/public/api/v1/purchase-reque
 
 > **Integração 1.1** : Busca Item de Solicitação de Compra
 
-```sh
-API GET: https://api.sienge.com.br/produtoeinovacao/public/api/v1/purchase-requests/all/items?purchaseRequestId={id}&buildingId={buildingId}
+```diff
++ API GET: https://api.sienge.com.br/produtoeinovacao/public/api/v1/purchase-requests/all/items?purchaseRequestId={id}&buildingId={buildingId}
 ```
 
 ```sh
@@ -1372,6 +1372,7 @@ API GET: https://api.sienge.com.br/produtoeinovacao/public/api/v1/purchase-reque
   
 ```diff  
 - **URL API SIENGE GET** : https://api.sienge.com.br/produtoeinovacao/public/api/v1/?????
+
 - Não encontamos no cardeno de APIs SIENGE (https://api.sienge.com.br/docs)
 ```
 
@@ -1379,6 +1380,7 @@ API GET: https://api.sienge.com.br/produtoeinovacao/public/api/v1/purchase-reque
 
 ```diff
 - **URL API SIENGE GET** : https://api.sienge.com.br/produtoeinovacao/public/api/v1/?????
+
 - Não encontamos no cardeno de APIs SIENGE (https://api.sienge.com.br/docs)
 ```
 
