@@ -107,18 +107,51 @@
   
 ## AIO-QUOTE – Contrato de APIs Origem e Destino
 
-> **SIENGE Webhook 1** Envia autorização de pedido de compra
-PURCHASE_ORDER_AUTHORIZATION_CHANGED : Sempre que a autorização do pedido de compra mudar
-
-```sh  
-AIO-OPS API POST : http://<servidor aio>/api/cotação/purchaseOrder
+> **Integração 1** Busca autorização de Solicitação de Compra
+```sh 
+  GET : https://api.sienge.com.br/produtoeinovacao/public/api/v1/purchase-requests/all/items?startDate=2022-03-01&endDate=2022-03-30&authorized=true
+```
+```sh
+{
+   "results": [
+        {
+            "purchaseRequestId": 842,
+            "itemNumber": 1,
+            "productId": 1010,
+            "productDescription": "Prego",
+            "detailId": null,
+            "detailDescription": "",
+            "trademarkId": null,
+            "trademarkDescription": "",
+            "quantity": 10.0,
+            "unitySymbol": "kg",
+            "notes": "",
+            "authorized": true,
+            "disapproved": false,
+            "competenceLevel": null,
+            "tenantUrl": "https://api.sienge.com.br/produtoeinovacao/public/api",
+            "links": [
+                {
+                    "rel": "delivery-requirements",
+                    "href": "https://api.sienge.com.br/produtoeinovacao/public/api/v1/purchase-requests/842/items/1/delivery-requirements"
+                }
+            ]
+        },
+    "resultSetMetadata": {
+        "count": 5,
+        "offset": 0,
+        "limit": 100
+    },
+    "links": [
+        {
+            "rel": "self",
+            "href": "https://api.sienge.com.br/produtoeinovacao/public/api/v1/purchase-requests/all/items?startDate=2022-03-01&endDate=2022-03-30&authorized=true&limit=100"
+        }
+    ]
+}
 ```
 
-```sh  
-Payload  :  { "purchaseOrderId" : int, "authorized": boolean } 
-```
-
-> **Integração 1** : Busca solicitação de Compras 
+> **Integração 1.1** : Busca solicitação de Compras 
 
 ```diff
 + API GET: https://api.sienge.com.br/produtoeinovacao/public/api/v1/purchase-requests/{purchaseRequestId}
@@ -126,44 +159,49 @@ Payload  :  { "purchaseOrderId" : int, "authorized": boolean }
 
 ```sh
 {
-  "id": 2104,
-  "buildingId": 300,
-  "departamentId": 5,
-  "requesterUser": "USER",
-  "requestDate": "2018-01-03",
-  "notes": "Annotation",
-  "status": "PENDING",
-  "consitent": "CONSISTENT",
-  "createdBy": "USER",
-  "createdAt": "2018-03-11T14:20:00.000-03:00",
-  "modifiedBy": "ANOTHERUSER",
-  "modifiedAt": "2018-04-02T18:20:00.000-03:00"
+    "id": 842,
+    "buildingId": 4,
+    "departamentId": null,
+    "requesterUser": "CONAZ",
+    "requestDate": "2022-03-24",
+    "notes": "",
+    "status": "PENDING",
+    "consistent": "CONSISTENT",
+    "createdBy": "CONAZ",
+    "createdAt": "2022-03-24T10:23:30.870-03:00",
+    "modifiedBy": "CONAZ",
+    "modifiedAt": "2022-03-24T10:25:00.373-03:00"
 }
 ```
 
-> **Integração 1.1** : Busca Item de Solicitação de Compra
+> **Integração 1.2** : Busca Item de Solicitação de Compra
 
 ```diff
-+ API GET: https://api.sienge.com.br/produtoeinovacao/public/api/v1/purchase-requests/all/items?purchaseRequestId={id}&buildingId={buildingId}
++ API GET: https://api.sienge.com.br/produtoeinovacao/public/api/v1/purchase-requests/{purchaseRequestId}/items/{itemNumber}/delivery-requirements
 ```
 
 ```sh
 {
-  "resultSetMetadata": { "count": 0, "offset": 0, "limit": 0  },
-  "results": [
-    {
-      "productId": 1001,
-      "detailId": 2,
-      "trademarkId": 3,
-      "quantity": 15,
-      "unitySymbol": "un",
-      "authorized": true,
-      "disapproved": false,
-      "competenceLevel": 0,
-      "notes": "Descrição do item"
-    }
-  ],
-  "links": [   {  "rel": "delivery-requirements",   "href": "http://../v1/purchase-requests/622/items/1/delivery-requirements"   }  ]
+    "results": [
+        {
+            "deliveryRequirementNumber": 1,
+            "requirementDate": "2022-03-24",
+            "requirementQuantity": 10.0,
+            "attendedQuantity": 0.0,
+            "openQuantity": true
+        }
+    ],
+    "resultSetMetadata": {
+        "count": 1,
+        "offset": 0,
+        "limit": 100
+    },
+    "links": [
+        {
+            "rel": "self",
+            "href": "https://api.sienge.com.br/produtoeinovacao/public/api/v1/purchase-requests/842/items/1/delivery-requirements?limit=100"
+        }
+    ]
 }
 ```
 
@@ -1371,9 +1409,25 @@ Payload  :  { "purchaseOrderId" : int, "authorized": boolean }
 > **Integração 5**       : Pequisa de Fornecedor
   
 ```diff  
-- **URL API SIENGE GET** : https://api.sienge.com.br/produtoeinovacao/public/api/v1/?????
-
-- Não encontamos no cardeno de APIs SIENGE (https://api.sienge.com.br/docs)
++ **URL API SIENGE GET** : https://api.sienge.com.br/produtoeinovacao/public/api/v1/creditors/{creditorId}
+```
+```sh
+{
+    "id": 1,
+    "name": "Domiceq",
+    "tradeName": "Domiceq",
+    "cpf": null,
+    "cnpj": "96.604.963/0001-73",
+    "supplier": "S",
+    "broker": "N",
+    "employee": "N",
+    "links": [
+        {
+            "rel": "bank-informations",
+            "href": "/sienge/api/v1/creditors/1/bank-informations"
+        }
+    ]
+}
 ```
 
 > **Integração 6**    : Pesquisa de Produto
