@@ -1438,7 +1438,7 @@
 - Não encontamos no cardeno de APIs SIENGE (https://api.sienge.com.br/docs)
 ```
 
-## Contrato de Request - PRESTES - Criação de Cotação
+## Contrato de Request - Criação de Cotação
 
 >Este Contrato de Request, baseado na disponibilidade de atributos apresentado na API **processarMensagemRequisicao**, define quais são os atributos que serão enviados, os tipo de valores, e os domínios caso exista, os campos requeridos pelo ME para atender a está requisição também devem ser definodos neste contrato:
 
@@ -1470,7 +1470,7 @@
   </soap12:Body>  
 ```
 
-## Contrato de Response - PRESTES - Pré Pedido de Cotação
+## Contrato de Response - Pré Pedido de Cotação
 
 >Este Contrato de Response, baseado na disponibilidade de atributos apresentado na API **getMessagePrePedidoResponse**,  define quais são os atributos que serão enviados, os tipo de valores, e o domínio caso exista, os campos requeridos pelo SIENGE para atender a está requisição também devem ser definodos neste contrato:
 
@@ -1520,7 +1520,7 @@
     </getMessagePrePedidoResponse>
   </soap12:Body>
 ```         
-## Contrato de Request - PRESTES - Fornecedor
+## Contrato de Request - Fornecedor
 
 >Este Contrato de Response, baseado na disponibilidade de atributos apresentado na API **processarMensagemFornecedor**,  define quais são os atributos que serão enviados, os tipo de valores, e o domínio caso exista, os campos requeridos pelo SIENGE para atender a está requisição também devem ser definodos neste contrato:
 
@@ -1663,7 +1663,7 @@
     </processarMensagemFornecedor>
   </soap12:Body>
 ```
-## Contrato de Request - PRESTES - Produto
+## Contrato de Request - Produto
 
 >Este Contrato de Response, baseado na disponibilidade de atributos apresentado na API **processarMensagemProduto**,  define quais são os atributos que serão enviados, os tipo de valores, e o domínio caso exista, os campos requeridos pelo SIENGE para atender a está requisição também devem ser definodos neste contrato:
 
